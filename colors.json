@@ -1,5 +1,6 @@
 {
     "primary": "white",
     "secondary": "black",
-    "accentColor": "#29ccbb"
+    "accentColor": "#29ccbb",
+    "background": "red"
 }

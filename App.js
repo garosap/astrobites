@@ -5,7 +5,7 @@ import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-
+import colors from "./colors.json";
 export default function App() {
     return (
         <View style={styles.container}>
@@ -18,7 +18,7 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#fff",
+        backgroundColor: colors.background,
         // alignItems: "center",
         // justifyContent: "center",
     },
