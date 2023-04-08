@@ -325,7 +325,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         marginBottom: 8,
         color: colors.text,
-        marginTop: 0.06 * Dimensions.get("window").width,
+        marginTop: 0.05 * Dimensions.get("window").width,
     },
     card: {
         width: 200,

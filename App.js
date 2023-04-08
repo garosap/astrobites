@@ -21,11 +21,12 @@ export default function App() {
 
     const handleSignin = (username, password) => {
         //Dummy authentication logic
-        if (username === user.username && password === user.password) {
-            setSigninVariable(true);
-        } else {
-            alert("Invalid username or password");
-        }
+        // if (username === user.username && password === user.password) {
+        //     setSigninVariable(true);
+        // } else {
+        //     alert("Invalid username or password");
+        // }
+        setSigninVariable(true);
     };
 
     if (!signinVariable) {
