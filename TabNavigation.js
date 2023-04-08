@@ -114,7 +114,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                         {label === "Home" && (
                             <MaterialCommunityIcons
                                 name="home"
-                                color={isFocused ? colors.primary : "#222"}
+                                color={isFocused ? colors.primary : "#FFF"}
                                 size={wp(7)}
                             />
                         )}
@@ -122,7 +122,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                         {label === "Orders" && (
                             <MaterialCommunityIcons
                                 name="bell"
-                                color={isFocused ? colors.primary : "#222"}
+                                color={isFocused ? colors.primary : "#FFF"}
                                 size={wp(7)}
                             />
                         )}
@@ -130,7 +130,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                         {label === "Challenges" && (
                             <MaterialCommunityIcons
                                 name="trophy"
-                                color={isFocused ? colors.primary : "#222"}
+                                color={isFocused ? colors.primary : "#FFF"}
                                 size={wp(7)}
                             />
                         )}
@@ -138,7 +138,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                         {label === "Profile" && (
                             <MaterialCommunityIcons
                                 name="account"
-                                color={isFocused ? colors.primary : "#222"}
+                                color={isFocused ? colors.primary : "#FFF"}
                                 size={wp(7)}
                             />
                         )}
@@ -146,7 +146,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                         <Text
                             style={{
                                 fontSize: wp(3),
-                                color: isFocused ? colors.primary : "#222",
+                                color: isFocused ? colors.primary : "#FFF",
                             }}>
                             {label}
                         </Text>
