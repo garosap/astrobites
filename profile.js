@@ -6,7 +6,7 @@ import {
     TextInput,
     ScrollView,
     Dimensions,
-    Image
+    Image,TouchableOpacity
 } from "react-native";
 import colors from "./colors.json";
 import {
@@ -37,14 +37,16 @@ const ProfilePage = () => {
 
                 <View style={{alignItems:'center', paddingTop:hp('2%')}}>
                     <Image
-                        source={require('./assets/3-removebg-preview.jpg')}
-                        style={{width:wp('30%'), height:hp('15%'),marginTop:hp('3%'), borderRadius:wp('15%')}}
+                        source={require('./assets/3-removebg-preview.png')}
+                        style={{width:wp('30%'), height:hp('19%'),marginTop:hp('1%'), borderRadius:wp('15%')}}
                     />
 
                     <Text style={{fontSize:wp('4%'), fontWeight:'bold', color:colors.text, paddingTop:hp('2%')}}>Iliadis Viktor, 24 Level </Text>
                     <Text style={{fontSize:wp('3%'),  color: '#666', paddingTop:hp('0.5%')}}>Star Eater </Text>
                     <View style={{backgroundColor:'#3A71F3', width:wp('30%'), height:hp('4%'), borderRadius:wp('2%'), alignItems:'center', justifyContent:'center', marginTop:hp('2%')}}>
-                        <Text style={{color:'white', fontSize:wp('3%')}}>Customize Me</Text>
+                    <TouchableOpacity onPress={() => alert('In the next version')}>
+                      <Text style={{color:'white', fontSize:wp('3%')}}>Customize Me</Text>
+                    </TouchableOpacity>    
                     </View>
                     {/* put a line  */}
                     <View style={{height:hp('0.1%'), width:wp('93%'), backgroundColor:'#ddd', marginTop:hp('2.5%')}}></View>
@@ -133,17 +135,17 @@ const ProfilePage = () => {
                         </View>
                         <View style={{flexDirection:'row', marginTop:hp('2%'),alignSelf:'flex-start',justifyContent:'space-around'}}>
                                <View style={{flexDirection:'column',alignItems:'center',marginLeft:wp('3.5%')}}>
-                                 <Image source={require('./assets/1-removebg-preview.png')} style={{width:wp('20%'), height:hp('10%'), borderRadius:wp('2%')}}/>
+                                 <Image source={require('./assets/badge1-removebg-preview.png')} style={{width:wp('20%'), height:hp('7.5%'), borderRadius:wp('2%')}}/>
                                   <Text style={{fontSize:wp('3%'), color:colors.text, fontWeight:'bold', paddingTop:hp('1%')}}>Steady Ship</Text>
 
                                </View>
                                <View style={{flexDirection:'column',alignItems:'center',marginLeft:wp('3.5%')}}>
-                               <Image source={require('./assets/1-removebg-preview.png')} style={{width:wp('20%'), height:hp('10%'), borderRadius:wp('2%')}}/>
+                               <Image source={require('./assets/badge2-removebg-preview.png')} style={{width:wp('20%'), height:hp('7.5%'), borderRadius:wp('2%')}}/>
                                   <Text style={{fontSize:wp('3%'), color:colors.text, fontWeight:'bold', paddingTop:hp('1%')}}>Daredevil</Text>
 
                                </View>
                                <View style={{flexDirection:'column',alignItems:'center',marginLeft:wp('3.5%')}}>
-                               <Image source={require('./assets/1-removebg-preview.png')} style={{width:wp('20%'), height:hp('10%'), borderRadius:wp('2%')}}/>
+                               <Image source={require('./assets/badge3-removebg-preview.png')} style={{width:wp('20%'), height:hp('7.5%'), borderRadius:wp('2%')}}/>
                                   <Text style={{fontSize:wp('3%'), color:colors.text, fontWeight:'bold', paddingTop:hp('1%')}}>Enjoyer</Text>
 
                                </View>
