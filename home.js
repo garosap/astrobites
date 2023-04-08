@@ -7,6 +7,7 @@ import {
     ScrollView,
     Dimensions,
     TouchableOpacity,
+    ImageBackground,
 } from "react-native";
 import SearchBar from "./searchBar";
 import colors from "./colors.json";
@@ -44,7 +45,12 @@ const HomePage = () => {
                     Weekly Challenge{" "}
                     <AntDesign name="right" size={wp(4)} color={colors.text} />
                 </Text>
-                <View style={[styles.weeklyChallenges]}>
+                {/* <View style={[styles.weeklyChallenges]}> */}
+                <ImageBackground
+                    resizeMode="cover"
+                    imageStyle={{ borderRadius: 8 }}
+                    source={require("./assets/jonhjohn.jpg")}
+                    style={styles.weeklyChallenges}>
                     <View
                         style={{
                             width: "30%",
@@ -73,8 +79,10 @@ const HomePage = () => {
                     <Text style={[styles.cardTitle, { fontSize: wp(5) }]}>
                         Galactic Critic
                     </Text>
-                </View>
+                    {/* </View> */}
+                </ImageBackground>
             </View>
+
             <View style={styles.cardContainer}>
                 <Text style={styles.heading}>Daily Misions </Text>
                 <View style={[styles.dailyMissions]}>
@@ -272,7 +280,7 @@ const styles = StyleSheet.create({
     weeklyChallenges: {
         width: wp(90),
         aspectRatio: 2.5,
-        backgroundColor: colors.secondary,
+        // backgroundColor: colors.secondary,
         borderRadius: 8,
         padding: wp(0.02),
         flexDirection: "column",
