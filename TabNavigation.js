@@ -8,6 +8,7 @@ import {
     heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import colors from "./colors.json";
+import OrdersPage from "./orders";
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +25,7 @@ function Orders() {
     return (
         <View
             style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-            <Text>Orders!</Text>
+           
         </View>
     );
 }
@@ -52,24 +53,18 @@ function MyTabs() {
         <Tab.Navigator
             initialRouteName="Home"
             screenOptions={{
-                // headerShown: false,
                 tabBarActiveTintColor: "#e91e63",
+                tabBarShowLabel: false,
                 tabBarStyle: {
                     height: hp("8%"),
-                    backgroundColor: colors.primary,
+                    backgroundColor: "white",
                     width: wp("90%"),
                     alignSelf: "center",
                     borderRadius: 1000,
                     marginBottom: hp("2%"),
-                    justifyContent: "center",
-                    padding: "3%",
+                    justifyContent: "center",       
                 },
-                tabBarLabelStyle: {
-                    flex: 1,
-                },
-                tabBarIconStyle: {
-                    flex: 1,
-                },
+    
             }}>
             <Tab.Screen
                 name="Home"
@@ -82,12 +77,13 @@ function MyTabs() {
                             color={color}
                             size={size}
                         />
+                        
                     ),
                 }}
             />
             <Tab.Screen
                 name="Orders"
-                component={Orders}
+                component={OrdersPage}
                 options={{
                     tabBarLabel: "Orders",
                     tabBarIcon: ({ color, size }) => (

@@ -11,11 +11,6 @@ const OrdersPage = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.topBar}>
-        <Text style={styles.title}>Orders</Text>        
-      </View>
-      <View style={{borderBottomColor: 'gray', borderBottomWidth: 0.5, width: windowWidth}} />
-
       <View style={styles.cardContainer}>
         <Text style={styles.heading}>Explore</Text>
         <SearchBar placeholder="Search" />
