@@ -11,11 +11,10 @@ const OrdersPage = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.topBar}>
+       <View style={styles.topBar}>
         <Text style={styles.title}>Orders</Text>        
       </View>
       <View style={{borderBottomColor: 'gray', borderBottomWidth: 0.5, width: windowWidth}} />
-
       <View style={styles.cardContainer}>
         <Text style={styles.heading}>Explore</Text>
         <SearchBar placeholder="Search" />
@@ -89,7 +88,7 @@ const styles = StyleSheet.create({
 
   cardContainer: {
     paddingHorizontal: 16,
-    paddingVertical: 8,
+    paddingVertical: 14,
   },
   heading: {
     fontSize: 18,
