@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity } from "react-native";
+import {
+    StyleSheet,
+    Text,
+    View,
+    ImageBackground,
+    TextInput,
+    TouchableOpacity,
+} from "react-native";
 import TabNavigation from "./TabNavigation";
 import {
     widthPercentageToDP as wp,
@@ -15,27 +22,39 @@ export default function App() {
 
     //Dummy user object
     const user = {
-        username: "user",
-        password: "123",
+        username: "",
+        password: "",
     };
 
     const handleSignin = (username, password) => {
+        setSigninVariable(true);
         //Dummy authentication logic
         // if (username === user.username && password === user.password) {
         //     setSigninVariable(true);
         // } else {
         //     alert("Invalid username or password");
         // }
-        setSigninVariable(true);
     };
 
     if (!signinVariable) {
         //Render the login screen if signinVariable is false
         return (
-            <ImageBackground source={require('./assets/Splash_Screen_new.png')} style={styles.containerApp}>
+            <ImageBackground
+                source={require("./assets/Splash_Screen_new.png")}
+                style={styles.containerApp}>
                 <StatusBar style="light" />
 
-                <Text style={{color:colors.text,marginBottom:wp('5%'),fontWeight:'bold',fontSize:wp('6%'),alignSelf:'flex-start',paddingLeft:wp('13%')}}>Sign In</Text>
+                <Text
+                    style={{
+                        color: colors.text,
+                        marginBottom: wp("5%"),
+                        fontWeight: "bold",
+                        fontSize: wp("6%"),
+                        alignSelf: "flex-start",
+                        paddingLeft: wp("13%"),
+                    }}>
+                    Sign In
+                </Text>
                 <View style={styles.inputContainer}>
                     <TextInput
                         style={styles.input}
@@ -53,7 +72,9 @@ export default function App() {
                         placeholderTextColor={colors.text}
                     />
                 </View>
-                <TouchableOpacity style={styles.button} onPress={() => handleSignin(username, password)}>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => handleSignin(username, password)}>
                     <Text style={styles.buttonText}>Sign In</Text>
                 </TouchableOpacity>
             </ImageBackground>
@@ -95,7 +116,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         paddingVertical: hp("0.8%"),
-        color: colors.text,        
+        color: colors.text,
     },
     button: {
         width: wp("80%"),
