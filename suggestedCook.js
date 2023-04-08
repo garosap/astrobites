@@ -9,19 +9,13 @@ import {
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const cardWidth = windowWidth * 0.5;
-const cardHeight = windowHeight * 0.22;
+const cardWidth = windowWidth * 0.9;
+const cardHeight = windowHeight * 0.07;
 
-const ScheduledCard = ({ imageSource, icon, title, subtitle, date }) => {
+const SuggestedCook = ({icon, title, subtitle, date }) => {
     
   return (
     <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={imageSource} style={styles.image} />
-      </View>
-     
-      <View style={styles.contentContainerGen}>
-        <Text style={styles.date}>{date}</Text>
       <View style={styles.contentContainer}>   
         <View style={styles.iconContainer}>
             <Image source={icon}  style={styles.image} />
@@ -30,20 +24,24 @@ const ScheduledCard = ({ imageSource, icon, title, subtitle, date }) => {
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.subtitle}>{subtitle}</Text>
         </View>
+        <View style={styles.line} />
+        <View>
+            <Text style={styles.date}>{date}</Text>
+        </View>
         </View>
       </View>
-    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: cardWidth,
     height: cardHeight,
     borderRadius: 8,
     backgroundColor: colors.secondary,
-    marginRight: 12,
-  },
+    padding:wp('2%'),
+    marginVertical:wp('1%'),
+    
+},
   imageContainer: {
     flex: 1,
   },
@@ -78,7 +76,7 @@ const styles = StyleSheet.create({
     paddingLeft:wp('1%'),
   },
   title: {
-    fontSize: 10,
+    fontSize: 11,
     fontWeight: 'bold',
     color: 'white',
   },
@@ -86,14 +84,19 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: 'bold',
     color: 'white',
-    paddingTop:wp('3%'),
-    paddingLeft:wp('3%'),
-
+    paddingLeft:wp('6%'),
+    paddingRight:wp('4%'),
   },
   subtitle: {
     fontSize: 10,
     color: '#666',
   },
+  line: {
+    height: '70%',
+    width: 1,
+    backgroundColor: '#ddd',
+    marginHorizontal: wp('2%'),
+  },
 });
 
-export default ScheduledCard;
+export default SuggestedCook;
