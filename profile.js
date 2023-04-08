@@ -7,6 +7,7 @@ import {
     ScrollView,
     Dimensions,
     Image,
+    TouchableOpacity,
 } from "react-native";
 import colors from "./colors.json";
 import {
@@ -37,11 +38,11 @@ const ProfilePage = () => {
 
             <View style={{ alignItems: "center", paddingTop: hp("2%") }}>
                 <Image
-                    source={require("./assets/1-removebg-preview.png")}
+                    source={require("./assets/3-removebg-preview.png")}
                     style={{
                         width: wp("30%"),
-                        height: hp("15%"),
-                        marginTop: hp("3%"),
+                        height: hp("19%"),
+                        marginTop: hp("1%"),
                         borderRadius: wp("15%"),
                     }}
                 />
@@ -53,7 +54,7 @@ const ProfilePage = () => {
                         color: colors.text,
                         paddingTop: hp("2%"),
                     }}>
-                    Iliadis Viktor, Level 24{" "}
+                    Iliadis Viktor, 24 Level{" "}
                 </Text>
                 <Text
                     style={{
@@ -73,9 +74,12 @@ const ProfilePage = () => {
                         justifyContent: "center",
                         marginTop: hp("2%"),
                     }}>
-                    <Text style={{ color: "white", fontSize: wp("3%") }}>
-                        Customize Me
-                    </Text>
+                    <TouchableOpacity
+                        onPress={() => alert("In the next version")}>
+                        <Text style={{ color: "white", fontSize: wp("3%") }}>
+                            Customize Me
+                        </Text>
+                    </TouchableOpacity>
                 </View>
                 {/* put a line  */}
                 <View
@@ -98,14 +102,19 @@ const ProfilePage = () => {
                             color: colors.text,
                             fontSize: wp(3.5),
                         }}>
-                        Level 24
+                        Refer 5 friends
                     </Text>
                     <Text
                         style={{
                             color: colors.text,
                             fontSize: wp(3.5),
                         }}>
-                        Level 25
+                        <MaterialCommunityIcons
+                            name="diamond-outline"
+                            size={wp(3)}
+                            color={colors.text}
+                        />{" "}
+                        30
                     </Text>
                 </View>
                 <View
@@ -193,10 +202,10 @@ const ProfilePage = () => {
                             marginLeft: wp("3.5%"),
                         }}>
                         <Image
-                            source={require("./assets/badge2-removebg-preview.png")}
+                            source={require("./assets/badge1-removebg-preview.png")}
                             style={{
-                                width: wp("18%"),
-                                height: hp("10%"),
+                                width: wp("20%"),
+                                height: hp("7.5%"),
                                 borderRadius: wp("2%"),
                             }}
                         />
@@ -217,10 +226,10 @@ const ProfilePage = () => {
                             marginLeft: wp("3.5%"),
                         }}>
                         <Image
-                            source={require("./assets/badge3-removebg-preview.png")}
+                            source={require("./assets/badge2-removebg-preview.png")}
                             style={{
                                 width: wp("20%"),
-                                height: hp("10%"),
+                                height: hp("7.5%"),
                                 borderRadius: wp("2%"),
                             }}
                         />
@@ -241,10 +250,10 @@ const ProfilePage = () => {
                             marginLeft: wp("3.5%"),
                         }}>
                         <Image
-                            source={require("./assets/badge1-removebg-preview.png")}
+                            source={require("./assets/badge3-removebg-preview.png")}
                             style={{
-                                width: wp("18%"),
-                                height: hp("10%"),
+                                width: wp("20%"),
+                                height: hp("7.5%"),
                                 borderRadius: wp("2%"),
                             }}
                         />
