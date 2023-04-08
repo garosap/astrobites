@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
 
     cardContainer: {
         paddingHorizontal: 16,
-        paddingVertical: 14,
+        paddingVertical: 0,
     },
     heading: {
         fontSize: 18,
