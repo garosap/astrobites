@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, ScrollView, Dimensions } from 'react-native';
 import SearchBar from './searchBar';
+import Card from './card';
 
 const OrdersPage = () => {
   const windowWidth = Dimensions.get('window').width;
@@ -34,7 +35,6 @@ const OrdersPage = () => {
         </ScrollView>
         <Text style={styles.heading}>Scheduled</Text>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          {/* Replace the following placeholders with your own cards */}
           <View style={[styles.card, { width: cardWidth, height: cardHeight }]}>
             <Text style={styles.cardTitle}>Card 1</Text>
           </View>
@@ -88,13 +88,12 @@ const styles = StyleSheet.create({
 
   cardContainer: {
     paddingHorizontal: 16,
-    paddingVertical: 14,
   },
   heading: {
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 8,
-    marginTop:  0.06 * Dimensions.get('window').width,
+    marginTop:  0.09 * Dimensions.get('window').width,
   },
   card: {
     width: 200,
