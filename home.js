@@ -6,9 +6,12 @@ import {
     TextInput,
     ScrollView,
     Dimensions,
+    TouchableOpacity,
 } from "react-native";
 import SearchBar from "./searchBar";
 import colors from "./colors.json";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
 const HomePage = () => {
     const windowWidth = Dimensions.get("window").width;
     const windowHeight = Dimensions.get("window").height;
@@ -19,7 +22,16 @@ const HomePage = () => {
     return (
         <View style={styles.container}>
             <View style={styles.topBar}>
-                <Text style={styles.title}>Orders</Text>
+                <Text style={styles.title}>Welcome, Apo</Text>
+                <TouchableOpacity
+                    style={styles.bell}
+                    onPress={() => alert("Notifications")}>
+                    <MaterialCommunityIcons
+                        name="bell-outline"
+                        size={24}
+                        color={colors.text}
+                    />
+                </TouchableOpacity>
             </View>
             {/* <View
                 style={{
