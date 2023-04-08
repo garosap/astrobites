@@ -11,7 +11,7 @@ import colors from "./colors.json";
 import OrdersPage from "./orders";
 import HomePage from "./home";
 import ProfilePage from "./profile";
-
+import { Feather } from '@expo/vector-icons'; 
 import ChallengesPage from "./challenges";
 const Tab = createBottomTabNavigator();
 
@@ -131,11 +131,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                         )}
 
                         {label === "Challenges" && (
-                            <MaterialCommunityIcons
-                                name="trophy"
-                                color={isFocused ? colors.primary : "#FFF"}
-                                size={wp(7)}
-                            />
+                            <Feather name="target" size={24}color={isFocused ? colors.primary : "#FFF"} />
                         )}
 
                         {label === "Profile" && (
@@ -220,11 +216,7 @@ function MyTabs() {
                 options={{
                     tabBarLabel: "Challenges",
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons
-                            name="bell"
-                            color={color}
-                            size={size}
-                        />
+                        <Feather name="target" size={24} color="black" />
                     ),
                 }}
             />
