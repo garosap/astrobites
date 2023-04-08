@@ -135,6 +135,7 @@ function MyTabs() {
             initialRouteName="Home"
             tabBar={(props) => <MyTabBar {...props} />}
             screenOptions={{
+                headerShown: false,
                 tabBarActiveTintColor: "#e91e63",
                 tabBarShowLabel: false,
                 tabBarStyle: {
@@ -145,15 +146,8 @@ function MyTabs() {
                     borderRadius: 1000,
                     marginBottom: hp("2%"),
                     justifyContent: "center",
-                    // padding: "3%",
                 },
                 tabBarShowLabel: false,
-                // tabBarLabelStyle: {
-                //     flex: 1,
-                // },
-                // tabBarIconStyle: {
-                //     flex: 1,
-                // },
             }}>
             <Tab.Screen
                 name="Home"
