@@ -12,21 +12,24 @@ import colors from "./colors.json";
 import ScheduledCard from "./scheduledCard";
 import SuggestedCook from "./suggestedCook";
 import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
+    widthPercentageToDP as wp,
+    heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import AntDesign from "react-native-vector-icons/AntDesign";
 
 const OrdersPage = () => {
     const windowWidth = Dimensions.get("window").width;
     const windowHeight = Dimensions.get("window").height;
-
     return (
         <View style={styles.container}>
             <View style={styles.topBar}>
                 <Text style={styles.title}>Orders</Text>
-                <Text style={styles.title2}>Athens, Chalandri</Text>
+                <Text style={styles.title2}>
+                    Athens, Chalandri{" "}
+                    <AntDesign name="down" size={wp(4)} color={colors.text} />
+                </Text>
             </View>
-            
+
             <View style={styles.cardContainer}>
                 <Text style={styles.heading}>Explore</Text>
                 <SearchBar placeholder="Search Cooks, Dishes and other" />
@@ -34,20 +37,50 @@ const OrdersPage = () => {
             <View style={styles.cardContainer}>
                 <Text style={styles.heading}>Suggested</Text>
                 <View>
-                    <SuggestedCook icon={require("./assets/1-removebg-preview.png")} title="Iliadis Viktor, 32 Level " subtitle="Galactic Cook" date="Last Order Nov 20"/>
-                    <SuggestedCook icon={require("./assets/1-removebg-preview.png")} title="Maria Garos, 23 Level " subtitle="Galactic Cook" date="Last Order Nov 24"/>
-                    <SuggestedCook icon={require("./assets/1-removebg-preview.png")} title="Nick Vlach, 120 Level " subtitle="Interstellar Chef" date="Last Order Nov 27 "/>
-
+                    <SuggestedCook
+                        icon={require("./assets/1-removebg-preview.png")}
+                        title="Iliadis Viktor, 32 Level "
+                        subtitle="Galactic Cook"
+                        date="Last Order Nov 20"
+                    />
+                    <SuggestedCook
+                        icon={require("./assets/1-removebg-preview.png")}
+                        title="Maria Garos, 23 Level "
+                        subtitle="Galactic Cook"
+                        date="Last Order Nov 24"
+                    />
+                    <SuggestedCook
+                        icon={require("./assets/1-removebg-preview.png")}
+                        title="Nick Vlach, 120 Level "
+                        subtitle="Interstellar Chef"
+                        date="Last Order Nov 27 "
+                    />
                 </View>
                 <Text style={styles.heading}>Scheduled</Text>
                 <ScrollView
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}>
-                    
-                    <ScheduledCard imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")} icon={require("./assets/1-removebg-preview.png")} title="Iliadis Viktor - 20 Mins" subtitle="Galactic Cook" date="20 November 2:30 PM " />
-                    <ScheduledCard imageSource={require("./assets/khloe-arledge-ND3edEmzcdQ-unsplash.jpg")} icon={require("./assets/4-removebg-preview.png")} title="Iliadis Viktor - 20 Mins" subtitle="Galactic Cook" date="20 November 2:30 PM "/>
-                    <ScheduledCard imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")} icon={require("./assets/1-removebg-preview.png")} title="Iliadis Viktor - 20 Mins" subtitle="Galactic Cook" date="20 November 2:30 PM "/>
-
+                    <ScheduledCard
+                        imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")}
+                        icon={require("./assets/1-removebg-preview.png")}
+                        title="Iliadis Viktor - 20 Mins"
+                        subtitle="Galactic Cook"
+                        date="20 November 2:30 PM "
+                    />
+                    <ScheduledCard
+                        imageSource={require("./assets/khloe-arledge-ND3edEmzcdQ-unsplash.jpg")}
+                        icon={require("./assets/4-removebg-preview.png")}
+                        title="Iliadis Viktor - 20 Mins"
+                        subtitle="Galactic Cook"
+                        date="20 November 2:30 PM "
+                    />
+                    <ScheduledCard
+                        imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")}
+                        icon={require("./assets/1-removebg-preview.png")}
+                        title="Iliadis Viktor - 20 Mins"
+                        subtitle="Galactic Cook"
+                        date="20 November 2:30 PM "
+                    />
                 </ScrollView>
             </View>
         </View>
@@ -61,7 +94,7 @@ const styles = StyleSheet.create({
     },
     topBar: {
         flexDirection: "column",
-        justifyContent: "start",
+        justifyContent: "flex-start",
         paddingHorizontal: 0.05 * Dimensions.get("window").width,
         paddingTop: 0.07 * Dimensions.get("window").height,
         paddingBottom: 0.02 * Dimensions.get("window").height,
@@ -72,10 +105,10 @@ const styles = StyleSheet.create({
         color: colors.text,
     },
     title2: {
-      fontSize: 0.053 * Dimensions.get("window").width,
-      fontWeight: "bold",
-      color: colors.text,
-  },
+        fontSize: 0.053 * Dimensions.get("window").width,
+        fontWeight: "bold",
+        color: colors.text,
+    },
     searchContainer: {
         flexDirection: "row",
         alignItems: "center",
@@ -97,7 +130,7 @@ const styles = StyleSheet.create({
 
     cardContainer: {
         paddingHorizontal: 16,
-        marginTop: wp('3%')
+        marginTop: wp("3%"),
     },
     heading: {
         fontSize: 18,
