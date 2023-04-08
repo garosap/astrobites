@@ -16,6 +16,7 @@ import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import Card from "./card";
 
 const HomePage = () => {
     const windowWidth = Dimensions.get("window").width;
@@ -210,7 +211,8 @@ const HomePage = () => {
                 <ScrollView
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}>
-                    <View
+                    {/* Replace the following placeholders with your own cards */}
+                    {/* <View
                         style={[
                             styles.card,
                             { width: cardWidth, height: cardHeight },
@@ -230,7 +232,19 @@ const HomePage = () => {
                             { width: cardWidth, height: cardHeight },
                         ]}>
                         <Text style={styles.cardTitle}>Card 3</Text>
-                    </View>
+                    </View> */}
+                    <Card
+                        imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")}
+                        icon={require("./assets/1-removebg-preview.png")}
+                        title="Mary Jones - 20 Mins"
+                        subtitle="Galactic Cook"
+                    />
+                    <Card
+                        imageSource={require("./assets/khloe-arledge-ND3edEmzcdQ-unsplash.jpg")}
+                        icon={require("./assets/2-removebg-preview.png")}
+                        title="Jose Black - 15 Mins"
+                        subtitle="Galactic Cook"
+                    />
                 </ScrollView>
             </View>
         </View>
