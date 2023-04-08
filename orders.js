@@ -10,78 +10,42 @@ import {
 import SearchBar from "./searchBar";
 import colors from "./colors.json";
 import ScheduledCard from "./scheduledCard";
+import SuggestedCook from "./suggestedCook";
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from "react-native-responsive-screen";
 
 const OrdersPage = () => {
     const windowWidth = Dimensions.get("window").width;
     const windowHeight = Dimensions.get("window").height;
 
-    const cardWidth = windowWidth * 0.4;
-    const cardHeight = windowHeight * 0.2;
-
     return (
         <View style={styles.container}>
             <View style={styles.topBar}>
                 <Text style={styles.title}>Orders</Text>
+                <Text style={styles.title2}>Athens, Chalandri</Text>
             </View>
             
             <View style={styles.cardContainer}>
                 <Text style={styles.heading}>Explore</Text>
-                <SearchBar placeholder="Search" />
+                <SearchBar placeholder="Search Cooks, Dishes and other" />
             </View>
             <View style={styles.cardContainer}>
                 <Text style={styles.heading}>Suggested</Text>
-                <ScrollView
-                    horizontal={true}
-                    showsHorizontalScrollIndicator={false}>
-                    <View
-                        style={[
-                            styles.card,
-                            { width: cardWidth, height: cardHeight },
-                        ]}>
-                        <Text style={styles.cardTitle}>Card 1</Text>
-                    </View>
-                    <View
-                        style={[
-                            styles.card,
-                            { width: cardWidth, height: cardHeight },
-                        ]}>
-                        <Text style={styles.cardTitle}>Card 2</Text>
-                    </View>
-                    <View
-                        style={[
-                            styles.card,
-                            { width: cardWidth, height: cardHeight },
-                        ]}>
-                        <Text style={styles.cardTitle}>Card 3</Text>
-                    </View>
-                </ScrollView>
+                <View>
+                    <SuggestedCook icon={require("./assets/1-removebg-preview.png")} title="Iliadis Viktor, 32 Level " subtitle="Galactic Cook" date="Last Order Nov 20"/>
+                    <SuggestedCook icon={require("./assets/1-removebg-preview.png")} title="Maria Garos, 23 Level " subtitle="Galactic Cook" date="Last Order Nov 24"/>
+                    <SuggestedCook icon={require("./assets/1-removebg-preview.png")} title="Nick Vlach, 120 Level " subtitle="Interstellar Chef" date="Last Order Nov "/>
+
+                </View>
                 <Text style={styles.heading}>Scheduled</Text>
                 <ScrollView
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}>
-                    {/* Replace the following placeholders with your own cards */}
-                    {/* <View
-                        style={[
-                            styles.card,
-                            { width: cardWidth, height: cardHeight },
-                        ]}>
-                        <Text style={styles.cardTitle}>Card 1</Text>
-                    </View>
-                    <View
-                        style={[
-                            styles.card,
-                            { width: cardWidth, height: cardHeight },
-                        ]}>
-                        <Text style={styles.cardTitle}>Card 2</Text>
-                    </View>
-                    <View
-                        style={[
-                            styles.card,
-                            { width: cardWidth, height: cardHeight },
-                        ]}>
-                        <Text style={styles.cardTitle}>Card 3</Text>
-                    </View> */}
+                    
                     <ScheduledCard imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")} icon={require("./assets/1-removebg-preview.png")} title="Iliadis Viktor - 20 Mins" subtitle="Galactic Cook" date="20 November 2:30 PM " />
+                    <ScheduledCard imageSource={require("./assets/khloe-arledge-ND3edEmzcdQ-unsplash.jpg")} icon={require("./assets/4-removebg-preview.png")} title="Iliadis Viktor - 20 Mins" subtitle="Galactic Cook" date="20 November 2:30 PM "/>
                     <ScheduledCard imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")} icon={require("./assets/1-removebg-preview.png")} title="Iliadis Viktor - 20 Mins" subtitle="Galactic Cook" date="20 November 2:30 PM "/>
 
                 </ScrollView>
@@ -96,9 +60,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.background,
     },
     topBar: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: "column",
+        justifyContent: "start",
         paddingHorizontal: 0.05 * Dimensions.get("window").width,
         paddingTop: 0.07 * Dimensions.get("window").height,
         paddingBottom: 0.02 * Dimensions.get("window").height,
@@ -108,6 +71,11 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: colors.text,
     },
+    title2: {
+      fontSize: 0.053 * Dimensions.get("window").width,
+      fontWeight: "bold",
+      color: colors.text,
+  },
     searchContainer: {
         flexDirection: "row",
         alignItems: "center",
@@ -129,14 +97,14 @@ const styles = StyleSheet.create({
 
     cardContainer: {
         paddingHorizontal: 16,
-        paddingVertical: 14,
+        marginTop: wp('4%')
     },
     heading: {
         fontSize: 18,
         fontWeight: "bold",
         marginBottom: 8,
         color: colors.text,
-        marginTop: 0.06 * Dimensions.get("window").width,
+        marginTop: 0.03 * Dimensions.get("window").width,
     },
     card: {
         width: 200,
