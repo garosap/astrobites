@@ -36,7 +36,7 @@ const OrdersPage = () => {
                 <View>
                     <SuggestedCook icon={require("./assets/1-removebg-preview.png")} title="Iliadis Viktor, 32 Level " subtitle="Galactic Cook" date="Last Order Nov 20"/>
                     <SuggestedCook icon={require("./assets/1-removebg-preview.png")} title="Maria Garos, 23 Level " subtitle="Galactic Cook" date="Last Order Nov 24"/>
-                    <SuggestedCook icon={require("./assets/1-removebg-preview.png")} title="Nick Vlach, 120 Level " subtitle="Interstellar Chef" date="Last Order Nov "/>
+                    <SuggestedCook icon={require("./assets/1-removebg-preview.png")} title="Nick Vlach, 120 Level " subtitle="Interstellar Chef" date="Last Order Nov 27 "/>
 
                 </View>
                 <Text style={styles.heading}>Scheduled</Text>
