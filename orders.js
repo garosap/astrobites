@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
 
     cardContainer: {
         paddingHorizontal: 16,
-        marginTop: wp('4%')
+        marginTop: wp('3%')
     },
     heading: {
         fontSize: 18,
