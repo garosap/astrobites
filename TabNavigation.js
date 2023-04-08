@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
@@ -47,10 +47,92 @@ function Profile() {
     );
 }
 
+// import { View, Text, TouchableOpacity } from "react-native";
+
+function MyTabBar({ state, descriptors, navigation }) {
+    return (
+        <View
+            style={{
+                flexDirection: "row",
+                height: hp("8%"),
+                backgroundColor: colors.primary,
+                width: wp("90%"),
+                alignSelf: "center",
+                borderRadius: 1000000,
+                marginBottom: hp("2%"),
+                justifyContent: "center",
+                alignItems: "center",
+            }}>
+            {state.routes.map((route, index) => {
+                const { options } = descriptors[route.key];
+                const label =
+                    options.tabBarLabel !== undefined
+                        ? options.tabBarLabel
+                        : options.title !== undefined
+                        ? options.title
+                        : route.name;
+
+                const isFocused = state.index === index;
+
+                const onPress = () => {
+                    const event = navigation.emit({
+                        type: "tabPress",
+                        target: route.key,
+                        canPreventDefault: true,
+                    });
+
+                    if (!isFocused && !event.defaultPrevented) {
+                        // The `merge: true` option makes sure that the params inside the tab screen are preserved
+                        navigation.navigate({ name: route.name, merge: true });
+                    }
+                };
+
+                const onLongPress = () => {
+                    navigation.emit({
+                        type: "tabLongPress",
+                        target: route.key,
+                    });
+                };
+
+                return (
+                    <TouchableOpacity
+                        accessibilityRole="button"
+                        accessibilityState={isFocused ? { selected: true } : {}}
+                        accessibilityLabel={options.tabBarAccessibilityLabel}
+                        testID={options.tabBarTestID}
+                        onPress={onPress}
+                        onLongPress={onLongPress}
+                        style={{
+                            flex: 1,
+                            backgrpundColor: "red",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}>
+                        <MaterialCommunityIcons
+                            name="home"
+                            color={isFocused ? "#673ab7" : "#222"}
+                            size={wp(7)}
+                        />
+
+                        <Text
+                            style={{
+                                fontSize: wp(3),
+                                color: isFocused ? "#673ab7" : "#222",
+                            }}>
+                            {label}
+                        </Text>
+                    </TouchableOpacity>
+                );
+            })}
+        </View>
+    );
+}
+
 function MyTabs() {
     return (
         <Tab.Navigator
             initialRouteName="Home"
+            tabBar={(props) => <MyTabBar {...props} />}
             screenOptions={{
                 // headerShown: false,
                 tabBarActiveTintColor: "#e91e63",
@@ -62,14 +144,15 @@ function MyTabs() {
                     borderRadius: 1000,
                     marginBottom: hp("2%"),
                     justifyContent: "center",
-                    padding: "3%",
+                    // padding: "3%",
                 },
-                tabBarLabelStyle: {
-                    flex: 1,
-                },
-                tabBarIconStyle: {
-                    flex: 1,
-                },
+                tabBarShowLabel: false,
+                // tabBarLabelStyle: {
+                //     flex: 1,
+                // },
+                // tabBarIconStyle: {
+                //     flex: 1,
+                // },
             }}>
             <Tab.Screen
                 name="Home"
