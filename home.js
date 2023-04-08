@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import SearchBar from "./searchBar";
 import colors from "./colors.json";
-const OrdersPage = () => {
+const HomePage = () => {
     const windowWidth = Dimensions.get("window").width;
     const windowHeight = Dimensions.get("window").height;
 
@@ -21,13 +21,13 @@ const OrdersPage = () => {
             <View style={styles.topBar}>
                 <Text style={styles.title}>Orders</Text>
             </View>
-            <View
+            {/* <View
                 style={{
                     borderBottomColor: "gray",
                     borderBottomWidth: 0.5,
                     width: windowWidth,
                 }}
-            />
+            /> */}
             <View style={styles.cardContainer}>
                 <Text style={styles.heading}>Explore</Text>
                 <SearchBar placeholder="Search" />
@@ -155,4 +155,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OrdersPage;
+export default HomePage;

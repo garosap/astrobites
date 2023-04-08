@@ -1,7 +1,8 @@
 {
     "primary": "#29ccbb",
-    "secondary": "black",
+    "secondary": "#252A35",
     "accentColor": "#29ccbb",
-    "tabBar": "lightgray",
-    "background": "white"
+    "tabBar": "#252A35",
+    "background": "#191B1F",
+    "text": "white"
 }

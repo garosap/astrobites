@@ -9,7 +9,7 @@ import colors from "./colors.json";
 export default function App() {
     return (
         <View style={styles.container}>
-            <StatusBar style="auto" />
+            <StatusBar style="light" />
             <TabNavigation />
         </View>
     );
