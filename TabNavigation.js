@@ -9,6 +9,7 @@ import {
 } from "react-native-responsive-screen";
 import colors from "./colors.json";
 import OrdersPage from "./orders";
+import HomePage from "./home";
 
 const Tab = createBottomTabNavigator();
 
@@ -184,7 +185,7 @@ function MyTabs() {
             }}>
             <Tab.Screen
                 name="Home"
-                component={Home}
+                component={HomePage}
                 options={{
                     tabBarLabel: "Home",
                     tabBarIcon: ({ color, size }) => (
