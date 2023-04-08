@@ -1,6 +1,7 @@
 {
-    "primary": "white",
+    "primary": "#29ccbb",
     "secondary": "black",
     "accentColor": "#29ccbb",
-    "background": "red"
+    "tabBar": "lightgray",
+    "background": "white"
 }

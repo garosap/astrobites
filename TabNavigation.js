@@ -55,7 +55,7 @@ function MyTabBar({ state, descriptors, navigation }) {
             style={{
                 flexDirection: "row",
                 height: hp("8%"),
-                backgroundColor: colors.primary,
+                backgroundColor: colors.tabBar,
                 width: wp("90%"),
                 alignSelf: "center",
                 borderRadius: 1000000,
@@ -104,20 +104,45 @@ function MyTabBar({ state, descriptors, navigation }) {
                         onLongPress={onLongPress}
                         style={{
                             flex: 1,
-                            backgrpundColor: "red",
                             justifyContent: "center",
                             alignItems: "center",
                         }}>
-                        <MaterialCommunityIcons
-                            name="home"
-                            color={isFocused ? "#673ab7" : "#222"}
-                            size={wp(7)}
-                        />
+                        {label === "Home" && (
+                            <MaterialCommunityIcons
+                                name="home"
+                                color={isFocused ? colors.primary : "#222"}
+                                size={wp(7)}
+                            />
+                        )}
+
+                        {label === "Orders" && (
+                            <MaterialCommunityIcons
+                                name="bell"
+                                color={isFocused ? colors.primary : "#222"}
+                                size={wp(7)}
+                            />
+                        )}
+
+                        {label === "Challenges" && (
+                            <MaterialCommunityIcons
+                                name="trophy"
+                                color={isFocused ? colors.primary : "#222"}
+                                size={wp(7)}
+                            />
+                        )}
+
+                        {label === "Profile" && (
+                            <MaterialCommunityIcons
+                                name="account"
+                                color={isFocused ? colors.primary : "#222"}
+                                size={wp(7)}
+                            />
+                        )}
 
                         <Text
                             style={{
                                 fontSize: wp(3),
-                                color: isFocused ? "#673ab7" : "#222",
+                                color: isFocused ? colors.primary : "#222",
                             }}>
                             {label}
                         </Text>
@@ -134,19 +159,19 @@ function MyTabs() {
             initialRouteName="Home"
             tabBar={(props) => <MyTabBar {...props} />}
             screenOptions={{
-                // headerShown: false,
-                tabBarActiveTintColor: "#e91e63",
-                tabBarStyle: {
-                    height: hp("8%"),
-                    backgroundColor: colors.primary,
-                    width: wp("90%"),
-                    alignSelf: "center",
-                    borderRadius: 1000,
-                    marginBottom: hp("2%"),
-                    justifyContent: "center",
-                    // padding: "3%",
-                },
-                tabBarShowLabel: false,
+                headerShown: false,
+                // tabBarActiveTintColor: "#e91e63",
+                // tabBarStyle: {
+                //     height: hp("8%"),
+                //     backgroundColor: colors.primary,
+                //     width: wp("90%"),
+                //     alignSelf: "center",
+                //     borderRadius: 1000,
+                //     marginBottom: hp("2%"),
+                //     justifyContent: "center",
+                //     // padding: "3%",
+                // },
+                // tabBarShowLabel: false,
                 // tabBarLabelStyle: {
                 //     flex: 1,
                 // },
