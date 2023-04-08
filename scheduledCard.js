@@ -8,14 +8,15 @@ const windowHeight = Dimensions.get("window").height;
 const cardWidth = windowWidth * 0.5;
 const cardHeight = windowHeight * 0.21;
 
-const Card = ({ imageSource, icon, title, subtitle }) => {
+const ScheduledCard = ({ imageSource, icon, title, subtitle, date }) => {
     
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <Image source={imageSource} style={styles.image} />
       </View>
-      <View style={styles.contentContainer}>
+      <Text style={styles.date}>{date}</Text>
+      <View style={styles.contentContainer}>   
         <View style={styles.iconContainer}>
             <Image source={icon}  style={styles.image} />
         </View>
@@ -44,6 +45,11 @@ const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 8,
   },
+  contentContainerGen: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent:'center',
+  },
   contentContainer: {
     flex: 1,
     flexDirection: 'row',
@@ -68,10 +74,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
   },
+  date: {
+    fontSize: 10,
+    fontWeight: 'bold',
+    color: 'white',
+  },
   subtitle: {
     fontSize: 10,
     color: '#666',
   },
 });
 
-export default Card;
+export default ScheduledCard;

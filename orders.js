@@ -9,6 +9,8 @@ import {
 } from "react-native";
 import SearchBar from "./searchBar";
 import colors from "./colors.json";
+import ScheduledCard from "./scheduledCard";
+
 const OrdersPage = () => {
     const windowWidth = Dimensions.get("window").width;
     const windowHeight = Dimensions.get("window").height;
@@ -21,13 +23,7 @@ const OrdersPage = () => {
             <View style={styles.topBar}>
                 <Text style={styles.title}>Orders</Text>
             </View>
-            <View
-                style={{
-                    borderBottomColor: "gray",
-                    borderBottomWidth: 0.5,
-                    width: windowWidth,
-                }}
-            />
+            
             <View style={styles.cardContainer}>
                 <Text style={styles.heading}>Explore</Text>
                 <SearchBar placeholder="Search" />
@@ -64,7 +60,7 @@ const OrdersPage = () => {
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}>
                     {/* Replace the following placeholders with your own cards */}
-                    <View
+                    {/* <View
                         style={[
                             styles.card,
                             { width: cardWidth, height: cardHeight },
@@ -84,7 +80,10 @@ const OrdersPage = () => {
                             { width: cardWidth, height: cardHeight },
                         ]}>
                         <Text style={styles.cardTitle}>Card 3</Text>
-                    </View>
+                    </View> */}
+                    <ScheduledCard imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")} icon={require("./assets/1-removebg-preview.png")} title="Iliadis Viktor - 20 Mins" subtitle="Galactic Cook" date="20 November 2:30 PM " />
+                    <ScheduledCard imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")} icon={require("./assets/1-removebg-preview.png")} title="Iliadis Viktor - 20 Mins" subtitle="Galactic Cook" date="20 November 2:30 PM "/>
+
                 </ScrollView>
             </View>
         </View>
