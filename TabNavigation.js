@@ -10,6 +10,7 @@ import {
 import colors from "./colors.json";
 import OrdersPage from "./orders";
 import HomePage from "./home";
+import ProfilePage from "./profile";
 
 const Tab = createBottomTabNavigator();
 
@@ -227,7 +228,7 @@ function MyTabs() {
             />
             <Tab.Screen
                 name="Profile"
-                component={Profile}
+                component={ProfilePage}
                 options={{
                     tabBarLabel: "Profile",
                     tabBarIcon: ({ color, size }) => (

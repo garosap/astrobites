@@ -24,7 +24,7 @@ const ScheduledCard = ({ imageSource, icon, title, subtitle, date }) => {
         <Text style={styles.date}>{date}</Text>
       <View style={styles.contentContainer}>   
         <View style={styles.iconContainer}>
-            <Image source={icon}  style={styles.image} />
+            <Image source={icon} style={styles.image} />
         </View>
         <View style={styles.infoContainer}>
           <Text style={styles.title}>{title}</Text>
