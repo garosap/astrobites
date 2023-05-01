@@ -2,7 +2,7 @@
 
 This project is the result of a 12-hour hackathon, EESTech Challenge Athens.
 
-![Login Screen Shot][login-screenshot]
+<!-- ![Login Screen Shot][login-screenshot]
 ![Home Screen Shot][home-screenshot]
 ![Orders Screen Shot][orders-screenshot]
 ![Challenges Screen Shot][challenges-screenshot]
@@ -12,7 +12,7 @@ This project is the result of a 12-hour hackathon, EESTech Challenge Athens.
 [home-screenshot]: ./public/home.png
 [orders-screenshot]: ./public/orders.png
 [challenges-screenshot]: ./public/challenges.png
-[profile-screenshot]: ./public/profile.png
+[profile-screenshot]: ./public/profile.png -->
 
 ## Contributors
 
