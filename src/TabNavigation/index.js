@@ -7,12 +7,12 @@ import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import colors from "./colors.json";
-import OrdersPage from "./orders";
-import HomePage from "./home";
-import ProfilePage from "./profile";
+import colors from "../colors.json";
+import OrdersPage from "../orders";
+import HomePage from "../home";
+import ProfilePage from "../profile";
 import { Feather } from '@expo/vector-icons'; 
-import ChallengesPage from "./challenges";
+import ChallengesPage from "../challenges";
 const Tab = createBottomTabNavigator();
 
 function Home() {
@@ -162,25 +162,7 @@ function MyTabs() {
             initialRouteName="Home"
             tabBar={(props) => <MyTabBar {...props} />}
             screenOptions={{
-                headerShown: false,
-                // tabBarActiveTintColor: "#e91e63",
-                // tabBarStyle: {
-                //     height: hp("8%"),
-                //     backgroundColor: colors.primary,
-                //     width: wp("90%"),
-                //     alignSelf: "center",
-                //     borderRadius: 1000,
-                //     marginBottom: hp("2%"),
-                //     justifyContent: "center",
-                //     // padding: "3%",
-                // },
-                // tabBarShowLabel: false,
-                // tabBarLabelStyle: {
-                //     flex: 1,
-                // },
-                // tabBarIconStyle: {
-                //     flex: 1,
-                // },
+                headerShown: false
             }}>
             <Tab.Screen
                 name="Home"

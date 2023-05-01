@@ -8,12 +8,12 @@ import {
     TextInput,
     TouchableOpacity,
 } from "react-native";
-import TabNavigation from "./TabNavigation";
+import TabNavigation from "./src/TabNavigation";
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import colors from "./colors.json";
+import colors from "./src/colors.json";
 
 export default function App() {
     const [signinVariable, setSigninVariable] = useState(false);

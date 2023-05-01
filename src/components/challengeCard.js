@@ -7,7 +7,7 @@ import {
     Dimensions,
     TouchableOpacity,
 } from "react-native";
-import colors from "./colors.json";
+import colors from "../colors.json";
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,

@@ -9,15 +9,14 @@ import {
     TouchableOpacity,
     ImageBackground,
 } from "react-native";
-import SearchBar from "./searchBar";
-import colors from "./colors.json";
+import colors from "../colors.json";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import Card from "./card";
+import Card from "../components/card";
 
 const HomePage = () => {
     const windowWidth = Dimensions.get("window").width;
@@ -49,7 +48,7 @@ const HomePage = () => {
                 <ImageBackground
                     resizeMode="cover"
                     imageStyle={{ borderRadius: 8 }}
-                    source={require("./assets/jonhjohn.jpg")}
+                    source={require("../../assets/jonhjohn.jpg")}
                     style={styles.weeklyChallenges}>
                     <View
                         style={{
@@ -242,14 +241,14 @@ const HomePage = () => {
                         <Text style={styles.cardTitle}>Card 3</Text>
                     </View> */}
                     <Card
-                        imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")}
-                        icon={require("./assets/1-removebg-preview.png")}
+                        imageSource={require("../../assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")}
+                        icon={require("../../assets/1-removebg-preview.png")}
                         title="Mary Jones - 20 Mins"
                         subtitle="Galactic Cook"
                     />
                     <Card
-                        imageSource={require("./assets/khloe-arledge-ND3edEmzcdQ-unsplash.jpg")}
-                        icon={require("./assets/2-removebg-preview.png")}
+                        imageSource={require("../../assets/khloe-arledge-ND3edEmzcdQ-unsplash.jpg")}
+                        icon={require("../../assets/2-removebg-preview.png")}
                         title="Jose Black - 15 Mins"
                         subtitle="Galactic Cook"
                     />

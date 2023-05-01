@@ -9,7 +9,7 @@ import {
     Image,
     TouchableOpacity,
 } from "react-native";
-import colors from "./colors.json";
+import colors from "../colors.json";
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
@@ -38,7 +38,7 @@ const ProfilePage = () => {
 
             <View style={{ alignItems: "center", paddingTop: hp("2%") }}>
                 <Image
-                    source={require("./assets/3-removebg-preview.png")}
+                    source={require("../../assets/3-removebg-preview.png")}
                     style={{
                         width: wp("30%"),
                         height: hp("19%"),
@@ -202,7 +202,7 @@ const ProfilePage = () => {
                             marginLeft: wp("3.5%"),
                         }}>
                         <Image
-                            source={require("./assets/badge1-removebg-preview.png")}
+                            source={require("../../assets/badge1-removebg-preview.png")}
                             style={{
                                 width: wp("20%"),
                                 height: hp("7.5%"),
@@ -226,7 +226,7 @@ const ProfilePage = () => {
                             marginLeft: wp("3.5%"),
                         }}>
                         <Image
-                            source={require("./assets/badge2-removebg-preview.png")}
+                            source={require("../../assets/badge2-removebg-preview.png")}
                             style={{
                                 width: wp("20%"),
                                 height: hp("7.5%"),
@@ -250,7 +250,7 @@ const ProfilePage = () => {
                             marginLeft: wp("3.5%"),
                         }}>
                         <Image
-                            source={require("./assets/badge3-removebg-preview.png")}
+                            source={require("../../assets/badge3-removebg-preview.png")}
                             style={{
                                 width: wp("20%"),
                                 height: hp("7.5%"),

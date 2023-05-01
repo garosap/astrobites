@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, TextInput, StyleSheet, Image } from "react-native";
-import colors from "./colors.json";
+import colors from "../colors.json";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 const SearchBar = ({ placeholder }) => {

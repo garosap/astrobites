@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
-import colors from "./colors.json";
+import colors from "../colors.json";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,

@@ -10,15 +10,13 @@ import {
     ImageBackground,
     Image,
 } from "react-native";
-import SearchBar from "./searchBar";
-import colors from "./colors.json";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import colors from "../colors.json";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import ChallengeCard from "./challengeCard";
+import ChallengeCard from "../components/challengeCard";
 
 const ChallengesPage = () => {
     const windowWidth = Dimensions.get("window").width;
@@ -45,7 +43,7 @@ const ChallengesPage = () => {
                         <ImageBackground
                             resizeMode="cover"
                             imageStyle={{ borderRadius: 8 }}
-                            source={require("./assets/jonhjohn.jpg")}
+                            source={require("../../assets/jonhjohn.jpg")}
                             style={styles.x}>
                             <View
                                 style={{
@@ -96,7 +94,7 @@ const ChallengesPage = () => {
                         <ImageBackground
                             resizeMode="cover"
                             imageStyle={{ borderRadius: 8 }}
-                            source={require("./assets/kap.jpg")}
+                            source={require("../../assets/kap.jpg")}
                             style={styles.x}>
                             <View
                                 style={{
@@ -141,7 +139,7 @@ const ChallengesPage = () => {
                         <ImageBackground
                             resizeMode="cover"
                             imageStyle={{ borderRadius: 8 }}
-                            source={require("./assets/jonhjohn.jpg")}
+                            source={require("../../assets/jonhjohn.jpg")}
                             style={styles.x}>
                             <View
                                 style={{
@@ -422,7 +420,7 @@ const ChallengesPage = () => {
                                 alignItems: "center",
                             }}>
                             <Image
-                                source={require("./assets/1-removebg-preview.png")}
+                                source={require("../../assets/1-removebg-preview.png")}
                                 resizeMode={"contain"}
                                 style={{ height: wp(13) }}
                             />
@@ -462,7 +460,7 @@ const ChallengesPage = () => {
                                 alignItems: "center",
                             }}>
                             <Image
-                                source={require("./assets/2-removebg-preview.png")}
+                                source={require("../../assets/2-removebg-preview.png")}
                                 resizeMode={"contain"}
                                 style={{ height: wp(13) }}
                             />
@@ -502,7 +500,7 @@ const ChallengesPage = () => {
                                 alignItems: "center",
                             }}>
                             <Image
-                                source={require("./assets/3-removebg-preview.png")}
+                                source={require("../../assets/3-removebg-preview.png")}
                                 resizeMode={"contain"}
                                 style={{ height: wp(13) }}
                             />
@@ -550,7 +548,7 @@ const ChallengesPage = () => {
                             }}>
                             <Text style={{ color: "white" }}>17th Place</Text>
                             <Image
-                                source={require("./assets/1-removebg-preview.png")}
+                                source={require("../../assets/1-removebg-preview.png")}
                                 resizeMode={"contain"}
                                 style={{ height: wp(10), width: wp(12) }}
                             />
@@ -576,7 +574,7 @@ const ChallengesPage = () => {
                             }}>
                             <Text style={{ color: "white" }}>1st Place</Text>
                             <Image
-                                source={require("./assets/1-removebg-preview.png")}
+                                source={require("../../assets/1-removebg-preview.png")}
                                 resizeMode={"contain"}
                                 style={{ height: wp(10), width: wp(12) }}
                             />
@@ -597,7 +595,7 @@ const ChallengesPage = () => {
                             }}>
                             <Text style={{ color: "white" }}>2nd Place</Text>
                             <Image
-                                source={require("./assets/1-removebg-preview.png")}
+                                source={require("../../assets/1-removebg-preview.png")}
                                 resizeMode={"contain"}
                                 style={{ height: wp(10), width: wp(12) }}
                             />
@@ -619,7 +617,7 @@ const ChallengesPage = () => {
                             }}>
                             <Text style={{ color: "white" }}>3rd Place</Text>
                             <Image
-                                source={require("./assets/1-removebg-preview.png")}
+                                source={require("../../assets/1-removebg-preview.png")}
                                 resizeMode={"contain"}
                                 style={{ height: wp(10), width: wp(12) }}
                             />

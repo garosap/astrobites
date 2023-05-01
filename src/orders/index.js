@@ -7,10 +7,10 @@ import {
     ScrollView,
     Dimensions,
 } from "react-native";
-import SearchBar from "./searchBar";
-import colors from "./colors.json";
-import ScheduledCard from "./scheduledCard";
-import SuggestedCook from "./suggestedCook";
+import SearchBar from "../components/searchBar";
+import colors from "../colors.json";
+import ScheduledCard from "../components/scheduledCard";
+import SuggestedCook from "../components/suggestedCook";
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
@@ -38,19 +38,19 @@ const OrdersPage = () => {
                 <Text style={styles.heading}>Suggested</Text>
                 <View>
                     <SuggestedCook
-                        icon={require("./assets/1-removebg-preview.png")}
+                        icon={require("../../assets/1-removebg-preview.png")}
                         title="Iliadis Viktor, 32 Level "
                         subtitle="Galactic Cook"
                         date="Last Order Nov 20"
                     />
                     <SuggestedCook
-                        icon={require("./assets/1-removebg-preview.png")}
+                        icon={require("../../assets/1-removebg-preview.png")}
                         title="Maria Garos, 23 Level "
                         subtitle="Galactic Cook"
                         date="Last Order Nov 24"
                     />
                     <SuggestedCook
-                        icon={require("./assets/1-removebg-preview.png")}
+                        icon={require("../../assets/1-removebg-preview.png")}
                         title="Nick Vlach, 120 Level "
                         subtitle="Interstellar Chef"
                         date="Last Order Nov 27 "
@@ -61,22 +61,22 @@ const OrdersPage = () => {
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}>
                     <ScheduledCard
-                        imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")}
-                        icon={require("./assets/1-removebg-preview.png")}
+                        imageSource={require("../../assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")}
+                        icon={require("../../assets/1-removebg-preview.png")}
                         title="Iliadis Viktor - 20 Mins"
                         subtitle="Galactic Cook"
                         date="20 November 2:30 PM "
                     />
                     <ScheduledCard
-                        imageSource={require("./assets/khloe-arledge-ND3edEmzcdQ-unsplash.jpg")}
-                        icon={require("./assets/4-removebg-preview.png")}
+                        imageSource={require("../../assets/khloe-arledge-ND3edEmzcdQ-unsplash.jpg")}
+                        icon={require("../../assets/4-removebg-preview.png")}
                         title="Iliadis Viktor - 20 Mins"
                         subtitle="Galactic Cook"
                         date="20 November 2:30 PM "
                     />
                     <ScheduledCard
-                        imageSource={require("./assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")}
-                        icon={require("./assets/1-removebg-preview.png")}
+                        imageSource={require("../../assets/joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg")}
+                        icon={require("../../assets/1-removebg-preview.png")}
                         title="Iliadis Viktor - 20 Mins"
                         subtitle="Galactic Cook"
                         date="20 November 2:30 PM "
