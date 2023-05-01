@@ -2,13 +2,17 @@
 
 This project is the result of a 12-hour hackathon, EESTech Challenge Athens.
 
-<div align="center">
-  <img src="public/login.png" alt="Login" width="200" />
-  <img src="public/home.png" alt="Home" width="200" />
-  <img src="public/orders.png" alt="Orders" width="200" />
-  <img src="public/challenges.png" alt="Challenges" width="200" />
-  <img src="public/profile.png" alt="Profile" width="200" />
-</div>
+![Login Screen Shot][login-screenshot]
+![Home Screen Shot][home-screenshot]
+![Orders Screen Shot][orders-screenshot]
+![Challenges Screen Shot][challenges-screenshot]
+![Profile Screen Shot][profile-screenshot]
+
+[login-screenshot]: ./public/login.png
+[home-screenshot]: ./public/home.png
+[orders-screenshot]: ./public/orders.png
+[challenges-screenshot]: ./public/challenges.png
+[profile-screenshot]: ./public/profile.png
 
 ## Contributors
 
