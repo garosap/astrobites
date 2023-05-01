@@ -3,11 +3,11 @@
 This project is the result of a 12-hour hackathon, EESTech Challenge Athens.
 
 <div align="center">
-  <img src="./public/login.png" alt="Login" width="200" />
-  <img src="./public/home.png" alt="Home" width="200" />
-  <img src="./public/orders.png" alt="Orders" width="200" />
-  <img src="./public/challenges.png" alt="Challenges" width="200" />
-  <img src="./public/profile.png" alt="Profile" width="200" />
+  <img src="public/login.png" alt="Login" width="200" />
+  <img src="public/home.png" alt="Home" width="200" />
+  <img src="public/orders.png" alt="Orders" width="200" />
+  <img src="public/challenges.png" alt="Challenges" width="200" />
+  <img src="public/profile.png" alt="Profile" width="200" />
 </div>
 
 ## Contributors
