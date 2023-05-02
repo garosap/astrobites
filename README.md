@@ -14,6 +14,11 @@ This project is the result of a 12-hour hackathon, EESTech Challenge Athens.
 [challenges-screenshot]: ./public/challenges.png
 [profile-screenshot]: ./public/profile.png -->
 
+
+[screenshots]: ./public/screenshots.png
+![ScreenShot][screenshots]
+
+
 ## Contributors
 
 The following contributors have participated in this hackathon:
