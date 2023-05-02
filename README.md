@@ -31,6 +31,9 @@ The following contributors have participated in this hackathon:
 
 The Astrobites project was developed during the EESTech Challenge Athens hackathon. Our team worked tirelessly for 12 hours to create this app.
 
+The app is a platform where users can order and purchase meals prepared by home cooks. It allows home cooks to offer their specialties for sale and enables customers to browse different dishes, select their preferred meal, and have it delivered to their location. The app promotes home-cooked meals as an alternative to fast food and restaurant dining, and provides an opportunity for home cooks to earn income from their culinary skills.
+
+
 ## Preview
 
 You can preview the app on your browser using Expo Snack by clicking [this link](https://snack.expo.dev/@apogrs/github.com-apostolisgaros-astrobites). We suggest selecting the Android option in the preview tab on the right.
